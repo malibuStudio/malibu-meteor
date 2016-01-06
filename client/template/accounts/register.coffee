@@ -27,6 +27,7 @@ Template.register.events
     Meteor.call 'register', obj, (err, res)->
       if err
         btn.classList.remove 'loading'
+        console.log err.reason
       else
         Meteor.loginWithPassword res.username, res.password, (err, result) ->
           if err
