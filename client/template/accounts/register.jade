@@ -1,0 +1,8 @@
+template(name="register")
+  with registerForm
+    form#register-form
+      input#register-username(type="username" name="{{username.name}}" placeholder="{{username.placeholder}}")
+      input#register-email(type="email" name="{{email.name}}" placeholder="{{email.placeholder}}")
+      input#register-password(type="password" name="{{password.name}}" placeholder="{{password.placeholder}}")
+      input#register-pass-conf(type="password" name="{{passwordConfirm.name}}" placeholder="{{passwordConfirm.placeholder}}")
+      button#register-button(type="submit" class="{{button.class}}") {{button.label}}
